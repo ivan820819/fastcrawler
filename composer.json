@@ -1,0 +1,41 @@
+{
+    "name": "9coding/fastcrawler",
+    "description": "基于swoole的分布式爬虫",
+    "keywords": ["crawler", "swoole", "distributed"],
+    "license": "Apache License 2.0",
+    "type": "project",
+    "homepage": "http://9coding.cn/",
+    "authors": [
+        {
+            "name": "ivan zhao",
+            "email": "ivan820819@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "ext-swoole": ">=4.0.1",
+        "predis/predis": "^1.1",
+        "monolog/monolog": "@stable",
+        "hassankhan/config": "@stable",
+        "league/pipeline": "^1.0",
+        "pimple/pimple": "^3.0",
+        "philipp15b/php-i18n": "^4.0",
+        "dragonmantank/cron-expression": "^2.2",
+        "guzzlehttp/guzzle": "~6.0",
+        "nesk/puphpeteer": "@stable"
+    },
+    "require-dev": {
+        "swoft/swoole-ide-helper": "dev-master",
+        "phpunit/phpunit": "^5.7",
+        "friendsofphp/php-cs-fixer": "^2.10"
+    },
+    "autoload": {
+        "files": [
+            "fastcrawler/helpers.php"
+        ],
+        "psr-4": {
+            "Fastcrawler\\": "fastcrawler/",
+            "crawler\\": "crawler/"
+        }
+    }
+}

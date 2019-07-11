@@ -1,0 +1,6 @@
+{
+    "private": true,
+    "devDependencies": {
+        "nesk/puphpeteer": "^1.2"
+    }
+}

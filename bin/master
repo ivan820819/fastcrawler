@@ -1,0 +1,16 @@
+#!/usr/bin/env php
+<?php
+
+$executeFile = $argv[0];
+$command = strtolower(trim(($argv[1]) ?? ''));
+if (!$command || !in_array($command, ['start','restart','stop','reload'])) {
+    die('Support command : php '.$executeFile.' start|restart|stop|reload|startd');
+}
+
+define('MODE', 'master');
+require_once __DIR__ . '/../bootstrap.php';
+
+$executeResult = \Fastcrawler\Core::$container['engine']->execute($command);
+if (!$executeResult) {
+    die('执行失败，具体请查看日志！');
+}

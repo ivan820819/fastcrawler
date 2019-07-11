@@ -1,0 +1,10 @@
+#!/usr/bin/env php
+<?php
+
+define('MODE', 'slave');
+require_once __DIR__ . '/../bootstrap.php';
+
+$executeResult = \Fastcrawler\Core::$container['engine']->execute();
+//if (!$executeResult) {
+//    die('执行失败，具体请查看日志！');
+//}
